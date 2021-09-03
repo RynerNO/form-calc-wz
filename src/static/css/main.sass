@@ -1,0 +1,273 @@
+body
+    background-image: url(../img/slider-1-bg.jpg)
+    background-repeat: no-repeat
+    background-size: 1920px
+*
+    box-sizing: border-box
+.contact_form
+    border-color: #e6e6e6
+    padding: 45px 25px 5px 25px
+    @media( max-width: 430px )
+        padding: 37px 15px 5px 15px
+    max-width: 494px
+    position: relative
+    margin-top: 30px
+    width: 100%
+    &__backButton
+        width: 30px
+        position: relative
+        z-index: 2
+        cursor: pointer
+        margin-bottom: 10px
+        display: none
+    &__background
+        background-color: #212121
+        opacity: 0.77
+        z-index: 1
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    input, textarea
+        background: rgba(49, 49, 49, 0.8);
+        color: #adadad;
+        padding: 19px 22px
+        font-size: 15px
+        border-radius: 2px
+        margin-bottom: 14px;
+        border: none
+        z-index: 5
+        &:focus 
+            border: none
+            outline: none
+    textarea
+        background-color: #313131
+    button
+            background-color: #00D1FF
+            color: #fff
+            z-index: 2
+            border: none
+            padding-top: 21px
+            padding-bottom: 22px
+            text-transform: uppercase
+            font-size: 13px
+            font-weight: bold
+            cursor: pointer
+            margin-bottom: 44px    
+            width: 100%  
+
+.form_wrapper, .calc_wrapper
+    
+    display: flex
+    flex-direction: column
+#contact_form
+    transition: all 0.3s linear
+.form_wrapper
+    display: none
+    transition: all 0.3s linear
+    &__recipient
+        display: none
+    &__sender, &__recipient
+        z-index: 5
+        position: relative
+        width: 100%
+        input, textarea
+            width: 100%
+        p
+            color: #fff
+            font-size: 20px
+.form_wrapper_error
+    color: #dc3232;
+    z-index: 2
+    font-size: 13px
+    display: none
+.calc_wrapper
+    display: flex
+    margin-bottom: 20px
+    position: relative;
+
+    z-index: 2
+    &>p
+        color: #797979
+        margin-top: 0
+        margin-bottom: 15px
+    &__title
+        color: #fff
+        margin-top: 0
+        font-size: 20px
+.calc_select_city_wrapper
+    display: flex
+    justify-content: space-between
+    z-index: 5
+    margin-bottom: 14px
+    
+.calc_select_city
+    z-index: 2
+    position: relative
+    
+    cursor: pointer
+    span
+        background: rgb(49, 49, 49)
+        color: #adadad
+        padding: 9px 22px
+        font-size: 15px
+        border-radius: 2px
+        min-width: 205px
+        max-width: 205px
+        height: 58px
+        display: flex
+
+        align-items: center
+        @media( max-width: 500px )
+            min-width: 170px
+            max-width: 170px
+            padding: 9px 15px
+        @media( max-width: 417px )
+            min-width: 150px
+            max-width: 150px
+            font-size: 11px    
+        z-index: 2
+    input
+        display: none
+        background: rgb(49, 49, 49)
+        color: #adadad
+        padding: 9px 22px
+        font-size: 15px
+        border-radius: 2px
+        min-width: 205px
+        max-width: 205px
+        height: 58px
+        margin-bottom: 0px
+        align-items: center
+        @media( max-width: 500px )
+            min-width: 170px
+            max-width: 170px
+            padding: 9px 15px
+        @media( max-width: 417px )
+            min-width: 150px
+            max-width: 150px
+            font-size: 11px
+    &_select
+        position: absolute
+        max-height: 0px
+        
+        transition: all 0.3s linear
+        overflow: hidden
+        overflow-y: scroll
+        display: flex
+        top: 58px
+        flex-direction: column
+        width: 100%
+        span
+            cursor: pointer
+            &:hover
+                background: rgb(63, 63, 63)
+    &__title
+        color: #fff
+        font-size: 20px    
+.calc_weight
+    z-index: 2
+        
+.calc_weight_choose
+    display: flex
+    justify-content: space-around
+    margin-top: 10px
+    &>span
+        color: #fff
+        position: relative
+        cursor: pointer
+        &::after
+            content: '';
+            display: block;
+            width: 9px
+            height: 9px
+            border: 3px solid #fff
+            box-sizing: content-box
+            border-radius: 100%
+            cursor: pointer
+            background-color: #fff
+            position: absolute
+            top: 5px
+            right: -25px
+        &:hover 
+            &::after
+                background-color: blue
+.calc_weight_estimated
+    display: none
+    z-index: 2    
+    margin-top: 15px
+.calc_weight_estimated_package
+    position: relative
+    padding-left: 25px
+    cursor: pointer
+    margin-bottom: 15px
+    span
+        color: #fff
+    &::before
+            content: '';
+            display: block;
+            width: 9px
+            height: 9px
+            border: 3px solid #fff
+            border-radius: 100%
+            box-sizing: content-box
+            cursor: pointer
+            background-color: #fff
+            position: absolute
+            top: 5px
+            left: 0px
+    &:hover 
+            &::before
+                background-color: blue
+
+
+.calc_weight_accurate
+    display: flex
+    flex-direction: column
+    
+    margin-top: 15px
+.calc_weight_price 
+    font-size: 14px
+    color: #fff
+    font-weight: bold
+    margin-left: 5px
+    margin-top: 5px
+    display: block
+.selectedBefore
+    &::before
+            background-color: blue !important
+.selectedAfter
+    &::after
+        background-color: blue !important
+
+#contact_form_zakaz
+    margin-bottom: 0px
+    padding-top: 13px
+    padding-bottom: 13px
+    font-weight: bold
+.contact_from_sended
+    display: none
+    z-index: 2
+    justify-content: center
+    flex-direction: column;
+    align-items: center;
+    div
+        width: 50px
+    p
+        color: #08960f
+        font-weight: bold
+        font-size: 16px
+
+
+#calc_select_who-is-playing 
+    margin-bottom: 15px;
+    span
+        max-width: 100%
+    &>span
+        // color: #757575
+        font-size: 16px
+    .calc_select_city_select
+        overflow-y: hidden
+#contact_form_sended_order-id
+    color: #fff
